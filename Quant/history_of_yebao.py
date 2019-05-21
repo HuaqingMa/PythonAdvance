@@ -10,7 +10,7 @@ SYMBOL_YEBAO = '000198'
 
 
 def obtain_info_of_data(symbol):
-    response = requests.get('http://fund.eastmoney.com/f10/F10DataApi.aspx?type=lsjz&code=' + str(symbol))
+    response = requests.get('http://fundf10.eastmoney.com/jjjz_000198.html' + str(symbol))
     # return format: var apidata={...};
     # filter the tag
     content = str(response.text.encode('utf8')[13:-2])
